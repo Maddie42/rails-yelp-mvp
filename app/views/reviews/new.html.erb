@@ -1,0 +1,9 @@
+<h1>Reviews#new</h1>
+<p>osef de la gueule que ça a ca sera moche dans tout les cas!</p>
+
+
+<%= simple_form_for [@restaurant, @review] do |f| %>
+  <%= f.input :content %>
+  <%= f.input :rating, collection: [0,1,2,3,4,5], as: :radio_buttons, item_wrapper_class: "radio-inline" %>
+  <%= f.submit "add a review", class: "btn btn-outline-success" %>
+<% end %>
